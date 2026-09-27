@@ -28,6 +28,8 @@ Jev launched in early access on **September 15, 2026**. This list is unofficial 
 - [Official resources](#official-resources)
 - [Community](#community)
 - [Featured builds with real numbers](#featured-builds-with-real-numbers)
+- [Jev guides by madewithjev.com](#jev-guides-by-madewithjevcom)
+- [What people use Jev for, by job](#what-people-use-jev-for-by-job)
 - [SDKs and clients](#sdks-and-clients)
 - [Applications](#applications)
   - [Browser and computer-use agents](#browser-and-computer-use-agents)
@@ -46,6 +48,7 @@ Jev launched in early access on **September 15, 2026**. This list is unofficial 
 - [Articles and coverage](#articles-and-coverage)
 - [Discussions](#discussions)
 - [FAQ](#faq)
+- [More guides, integrations and lists](#more-guides-integrations-and-lists)
 - [Related lists](#related-lists)
 - [Contribute](#contribute)
 
@@ -205,8 +208,73 @@ Production-shaped uses with the cost and latency their authors reported. Each li
 | [typesafe-computer-use](https://madewithjev.com/builds/typesafe-computer-use) | macOS computer use, one typed decision per step | ~$0.0002/step | [GitHub](https://github.com/awlevin/typesafe-computer-use) |
 | [jev-drone](https://madewithjev.com/builds/jev-drone) | Tactical judgment loop flying on hardware | control at 2.5 Hz | [GitHub](https://github.com/RomanSlack/jev-drone) |
 | [Wikiracing](https://madewithjev.com/builds/wikiracing) | Pick one link out of thousands until you arrive | 255-option Choice ceiling | [TypeSafe](https://typesafe.ai/blog/introducing-system-one-models-and-jev) |
+| [100,000 viral posts in 20.4 seconds](https://madewithjev.com/builds/viral-post-analyser) | Fourteen yes-or-no questions per post, over a whole archive | 100,000 posts, 20.4 s, $0.67 | [X](https://x.com/0xMovez/status/2101325703635435523) |
+| [Tocsin](https://madewithjev.com/builds/tocsin) | 22.8M log lines grouped into patterns, then one question each | 22.8M lines, ~6 min, $0.64 | [GitHub](https://github.com/TPAteeq/tocsin) |
+| [723 ads, 30 personas, 22 cents](https://madewithjev.com/builds/ad-focus-group) | One synthetic focus group over a whole ad library | 21,690 decisions, $0.22 | [X](https://x.com/TheMattBerman/status/2101439340588974096) |
+| [1,891 ads in 19 seconds](https://madewithjev.com/builds/maxfusion-ad-library) | Every live ad in a competitor's library tagged by hook, offer and format | 1,891 ads, 19 s, $0.12 | [X](https://x.com/aresotik/status/2100949805573030378) |
+| [2,300 AI papers in about 83 seconds](https://madewithjev.com/builds/2300-papers-in-83-seconds) | A paper corpus screened and labelled in one pass | 2,300 papers, ~83 s, ~$0.14 | [X](https://x.com/KennyChinaTech/status/2102201611502448865) |
+| [700 leads scored in 40 seconds](https://madewithjev.com/builds/lead-outreach-scoring) | ICP fit and outreach quality before a human reads the list | 700 leads, 40 s, $0.09 | [X](https://x.com/romanbuildsaas/status/2100891604735099103) |
+| [24,000 Hacker News posts in two minutes](https://madewithjev.com/builds/venice-hacker-news-classification) | A whole forum archive clustered into twelve categories | 24,000 posts, ~2 min | [X](https://x.com/sabrinaesaquino/status/2101102660997017747) |
+| [Jev blocks a $50,000 transfer](https://madewithjev.com/builds/jev-blocks-transfer) | One Noul in front of an irreversible action | 95% irreversible risk, 94% sensitivity — it refused | [X](https://x.com/fluixoo/status/2102680895425503354) |
+| [A second-hand shopping agent](https://madewithjev.com/builds/second-hand-shopping-agent) | Listing matched to a shopper, per item, in a loop | ~26 listings/min, 406 ms, $0.00085 | [X](https://x.com/AlanDaitch/status/2100757989212754085) |
+| [900 images in 40 seconds](https://madewithjev.com/builds/ocr-image-classifier) | OCR output classified one image at a time | ~900 images, 40 s | [X](https://x.com/fayazara/status/2100953838891192789) |
+| [40,000 wallets screened in four seconds](https://madewithjev.com/builds/wallet-filter-40k) | Addresses judged against a rule set at scale | 40,000 wallets, 4 s | [X](https://x.com/burstingbagel/status/2102592197476626486) |
+| [Beating the Ender Dragon in Minecraft](https://madewithjev.com/builds/minecraft-ender-dragon) | Jev and Astra play a full Minecraft run to the end | 8m 43s, $0.97 | [X](https://x.com/rronak_/status/2101544156757950697) |
+| [Laya, 421M parameters, local](https://madewithjev.com/builds/laya-421m-local-decisions) | An open-weight decision model on a laptop | 86.5 decisions/s, P50 ~9 ms | [X](https://x.com/the_mdfazal/status/2102012970373111933) |
+| [von](https://madewithjev.com/builds/von-sub-15ms) | A local decision runtime built for latency | under 15 ms per decision | [GitHub](https://github.com/wfzyx/von) |
+| [Tev1 0.8B](https://madewithjev.com/builds/tev1-local-classifier) | Together AI's open Jev-style classifier | 0.8B params, ~50 ms | [X](https://x.com/nutlope/status/2103183092428984413) |
 
 All figures are as reported by each author, not measured by this list. → [Browse the full directory at madewithjev.com](https://madewithjev.com)
+
+## Jev guides by madewithjev.com
+
+The directory that maintains this list also writes the explainers. Every figure in them is read from the same builds — 729 of them as of this writing — so they can be cited, and the counts are recomputed as the directory grows. Start at the [guides index](https://madewithjev.com/guides).
+
+**The basics**
+
+- [Jev explained in plain English](https://madewithjev.com/jev-explained) - No jargon: Jev answers multiple-choice questions about a piece of text, in about the time it takes to blink, for about a hundredth of a cent. What that changes, and what it cannot do.
+- [What is Jev?](https://madewithjev.com/what-is-jev) - The full explainer: what a System One model is, the three question types, what a call returns, what it costs and where it fails.
+- [What is Jev Engineering?](https://madewithjev.com/what-is-jev-engineering) - The name for the split — an LLM writes, Jev decides, code acts — and the rules the builds on this list have in common.
+- [Jev vs an LLM](https://madewithjev.com/jev-vs-llm) - The same job done both ways, with the figures each builder published, including the cases where the larger model still won.
+- [Jev pricing](https://madewithjev.com/jev-pricing) - $0.042 per million input tokens, output free, and the median published cost per decision across the directory.
+- [The Jev Build Report](https://madewithjev.com/jev-statistics) - The directory's own count: every public build, the median cost per decision, the median decision time, and the stars and languages of every repository created since launch. Free to cite, with the rows as JSON.
+
+**Building with Jev**
+
+- [How to use Jev](https://madewithjev.com/how-to-use-jev) - Your first call line by line, then the SDKs, the gateways and every video walkthrough.
+- [Jev with Claude Code](https://madewithjev.com/jev-with/claude-code) - Routing and compaction inside Claude Code, the builds behind the 200× headline, and where that ceiling stops.
+- [Jev and MCP](https://madewithjev.com/jev-mcp) - The MCP servers that let Claude Code, Cursor and Codex ask for a typed judgment while they work.
+- [Jev agentic harness](https://madewithjev.com/jev-agentic-harness) - The decision layer: the model proposes, Jev answers, code acts, with a receipt per step.
+- [Jev agent orchestration](https://madewithjev.com/jev-multi-agent) - Who goes next, is this good enough, should we retry, and when a person has to step in.
+- [Open-source Jev](https://madewithjev.com/open-source-jev) - There are no open weights. These are the models that answer typed questions on your own machine, by family.
+- [Can you fine-tune Jev?](https://madewithjev.com/jev-fine-tune) - What people train instead: a $17 run on Qwen3.5 4B, a $95 open reproduction, and every replica in the directory.
+
+**By job**
+
+- [Jev use cases](https://madewithjev.com/jev-use-cases) - Every catalogued build, grouped by the job Jev does inside it rather than by category.
+- [Jev as a judge](https://madewithjev.com/jev-as-a-judge) - Jev in place of an LLM judge: evals, rubrics, and what the confidence score is and is not.
+- [Jev for SEO](https://madewithjev.com/jev-for-seo) / [Jev for ads](https://madewithjev.com/jev-for-ads) / [Jev for marketing](https://madewithjev.com/jev-for-marketing) - The three verticals with the most published numbers.
+
+**Elsewhere**
+
+- [Qué es Jev: el modelo System One de TypeSafe AI](https://www.linkedin.com/pulse/qu%C3%A9-es-jev-el-modelo-system-one-de-typesafe-ai-que-en-kraayenbrink-g65ff/) - (Spanish) Our explainer on LinkedIn: what a System One model is, what Jev decides, and where it fits.
+- [Sift](https://madewithjev.com/sift) - Our own Mac app: sorts, labels and marks your Gmail with a System One model running on your machine.
+
+## What people use Jev for, by job
+
+The same builds as the table above, grouped by the job Jev does inside them rather than by industry. [Every catalogued build, grouped this way →](https://madewithjev.com/jev-use-cases)
+
+| Job | What Jev decides | One published result |
+|---|---|---|
+| Sort a pile too big to read | One question, or twenty, asked of every item in a corpus | 100,000 posts, 20.4 s, $0.67 |
+| Triage a queue into buckets | Email, tickets, PRs and leads sorted by what each needs next | 500 emails for 3.5 cents |
+| Choose an agent's next action | Given this page, which element to act on | a flight search in ~7 s, ~$0.004 |
+| Decide inside a frame | Games, control loops and price feeds on a deadline | Tetris at ~0.3 s a move |
+| Score something before it ships | A draft, ad, lead or page graded against a rubric | 61 questions in ~1 s, $0.0004 |
+| Block the risky step | One Noul in front of an action that cannot be undone | a $50,000 transfer refused at 95% risk |
+| Shrink what the LLM reads | Score each piece of context and drop the stale ones | a Claude session from ~1M to 86K tokens |
+| Judge every row where the data is | A Jev call written as a SQL function | 129 rows in ~1 s, in SQL |
+| Pick what the screen shows | The next component, look or result from a catalogue | 6,241 companies ranked in ~1 s |
 
 ## SDKs and clients
 
@@ -265,7 +333,7 @@ Open-source projects that put Jev in a real loop. Grouped by what Jev decides.
 - [1kpapers](https://www.1kpapers.com/) - 1,018 papers classified by topic and published as a browsable site.
 - [jev.nvim](https://github.com/valentynkit/jev.nvim) - Neovim plugin that splits the current buffer into functions with Treesitter, asks Jev a plain-language question against each one, and lists the answers in the quickfix window ranked by probability.
 
-→ [More research and data builds on madewithjev.com](https://madewithjev.com/categories/research-and-data)
+→ [More search and reranking builds on madewithjev.com](https://madewithjev.com/categories/search)
 
 ### Developer tools and code review
 
@@ -490,6 +558,16 @@ Independent work inspired by Jev's interface. These are not TypeSafe models.
 - [TypeSafeのJevを正しく驚く、それってLLMでできませんか？](https://zenn.dev/nwn/articles/824026c76116e0) - (Japanese) Reproduces the JSON-vs-logit shortcut on Gemma and compares Jev with LLMs on the public Mario harness.
 - [jev 同士に五目並べで対戦させた](https://zenn.dev/mizchi/articles/jev-plays-gomoku) - (Japanese) Jev vs Jev gomoku with source and timing logs.
 - [Jev on AI Wiki](https://aiwiki.ai/wiki/jev) - Community-maintained reference page.
+- [A new kind of AI model is thrilling developers](https://techcrunch.com/2026/09/18/a-new-kind-of-ai-model-from-a-chatgpt-inventor-is-thrilling-developers/) - TechCrunch on why developers see a cheaper and faster path to software intelligence.
+- [Jev, with Diogo Almeida](https://www.latent.space/p/jev) - Latent Space interviews TypeSafe's founder about System One models and what Jev is for.
+- [Build an agentic harness using Jev](https://x.com/Av1dlive/status/2102802621664985241) - Avid's builder's guide, and the fullest public write-up of the pattern: where the decision layer sits in a coding harness, the five rules that keep it enforceable, and the Rust app it was built in.
+- [The Jev + Claude Code Stack](https://x.com/cyrilXBT/status/2101515130798297448) - Where the 200× and 400× headline figures come from, why they are a ceiling rather than a typical result, and the decision-point audit that finds yours.
+- [How to train your own Jev for $17](https://x.com/nutlope/status/2102881280115249597) - Together AI fine-tunes a Jev-like classifier on Qwen3.5 4B: ~38,000 sampled questions, ~25 minutes of training, and the tev1 repository that runs it.
+- [What Jev is, and the businesses it unlocks](https://x.com/gregisenberg/status/2101018750916948237) - Greg Isenberg: find an expensive queue and put Jev at the front of it. Seven ideas, from instant quotes to lead scoring.
+- [Introducing Jev-as-a-judge](https://deepeval.com/blog/introducing-jev-as-a-judge) - DeepEval on building evals with Jev as the judge instead of a generative model.
+- [A hype-free explanation of Jev](https://x.com/NathanFlurry/status/2100036101809619314) - Nathan Flurry: Jev does not replace GPT or Claude. It works like a very smart switch statement.
+- [Jev Explained for Normies](https://x.com/matthewcanham/status/2102077098756280413) - Matt Canham's X article, written for everyone who read the launch posts and still did not get it.
+- [Jev, explained like you're five](https://x.com/mvanhorn/status/2100761338918363550) - Matt Van Horn: think AI multiple choice, not AI essay writing. Keep the big model for the hard thinking.
 
 ## Discussions
 
@@ -541,6 +619,39 @@ Choice questions cap at 255 options. Text only — no images, audio, or video. L
 ### What is a System One model?
 
 TypeSafe's name for a model class built for fast, structured decisions inside software — as opposed to chat models that generate text for humans. Named after the fast, intuitive "System 1" mode of thinking. Jev is the first public one.
+
+## More guides, integrations and lists
+
+**Video explainers**
+
+- [Jev Explained in 3 Mins](https://www.youtube.com/shorts/zkZQT5rbrf4) - KodeKloud's short: what a System One model decides, and why it answers in milliseconds.
+- [Jev explained in 7 mins](https://www.youtube.com/watch?v=vj7hysh0mOI) - Caleb Writes Code: what Jev is and how to use it.
+- [Jev explained with Python examples](https://www.youtube.com/watch?v=EAh1h1GYxDM) - ZazenCodes works through Jev hands on, from a first call to typed decisions.
+- [Jev Explained for Python Developers](https://www.youtube.com/watch?v=JpfLID19QnQ) - Dave Ebbelaar: a support-ticket classification first, then the three primitives, with latency and price next to Claude Haiku and Opus.
+- [Steerable Reranking: How JEV Solves RAG](https://www.youtube.com/watch?v=UhGH8cNG0qs) - Prompt Engineering puts Jev in the reranking step of a RAG pipeline, with a Colab notebook.
+- [Jev AI Full COURSE 1 HOUR](https://www.youtube.com/watch?v=Hz8tobAFBVM) - Julian Goldie's hour-long course: the three question types and ten use cases.
+- [Jev System One Model, clearly explained](https://www.youtube.com/watch?v=RMQI_y1AvvA) - Sean's AI Stories explains TypeSafe AI, fast judgment and evaluation end to end.
+
+**Framework and platform integrations**
+
+- [Opik](https://github.com/comet-ml/opik) - Comet's open-source evaluation and tracing platform, whose custom-metric interface takes several named scores from one Jev call.
+- [Trace every judgment with Phoenix](https://arize.com/docs/phoenix/integrations/llm-providers/typesafe) - Arize's instrumentation: one line of code to trace each decision.
+- [Jev in Pydantic AI](https://pydantic.dev/docs/ai/models/typesafe/) - The native TypeSafe model, to call Jev from a Pydantic AI agent.
+- [Jev through LiteLLM](https://docs.litellm.ai/docs/pass_through/typesafe) - Pass-through docs for calling TypeSafe from an existing LiteLLM proxy.
+- [langchain-typesafe](https://pypi.org/project/langchain-typesafe/) - The LangChain package with `TypeSafeClassifier`.
+- [Jev on Netlify AI Gateway](https://www.netlify.com/changelog/typesafe-jev-ai-gateway/) - Jev through Netlify's AI Gateway with zero configuration.
+
+**Directories and lists**
+
+- [jev.directory](https://jev.directory/) - A community directory of systems built on Jev, listed by the Noul, Score and Choice questions they send.
+- [awesomejev.com](https://awesomejev.com/) - A directory of projects built on Jev: repositories, SDKs, integrations, demos and benchmarks.
+- [Jevable](https://jevable.com) - Nikunj Kothari's directory of the demos posted on X, filterable by category.
+- [awesome-typesafe](https://github.com/AbdelStark/awesome-typesafe) - Official resources and community projects for TypeSafe, System One models and Jev.
+- [jev-skill](https://github.com/wuyoscar/jev-skill) - A collection of Jev use cases, workflows and agent skills in one repository.
+- [awesome-jev-projects](https://github.com/logicrw/awesome-jev-projects) - A source-backed radar of the open-source ecosystem, in English, Chinese, Japanese and Korean.
+- [awesome-jev (verified catalog)](https://github.com/heyjunpenn/awesome-jev) - A community-maintained catalog that claims 433 verified open-source projects.
+- [Papers and open reproductions](https://github.com/OmniJev/awesome-jev) - The papers, open reproductions and independent evaluations behind System One models.
+- [fatwang2/awesome-jev](https://github.com/fatwang2/awesome-jev) - A source-backed project directory with a GitHub review workflow that uses only Jev.
 
 ## Related lists
 
