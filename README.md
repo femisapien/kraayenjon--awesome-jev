@@ -317,6 +317,7 @@ Open-source projects that put Jev in a real loop. Grouped by what Jev decides.
 - [Unclutter](https://github.com/kitze/unclutter) - Chrome / Firefox extension: Jev classifies nonessential page elements; local template rules hide them on later visits.
 - [TypeSafe AdBlock](https://github.com/realZachi/typesafe-adblock) - Chrome extension: Jev judges whether a DOM element is an ad and removes it. BYOK, no backend; a demo, not a real ad blocker.
 - [jev-skip](https://github.com/valentynkit/jev-skip) - Browser extension that reads a YouTube video's caption track and paints a per-segment sponsor probability on the seek bar before the intro ends, with no crowdsourced database.
+- [Jev Social](https://github.com/socai-io/jev-social) - Local Instagram, TikTok, and LinkedIn research loop: Jev uses Choice to select a platform and a concrete read-only operation from captured evidence, then the socai CLI executes that browser step and returns new evidence.
 
 → [More agents and browsers on madewithjev.com](https://madewithjev.com/categories/agents-and-browsers)
 
@@ -332,6 +333,12 @@ Open-source projects that put Jev in a real loop. Grouped by what Jev decides.
 - [jev-curate](https://github.com/AkashPriyadarshii/jev-curate) - High-throughput synthetic dataset sifter in Rust: Noul checks on JSONL and Parquet rows, streaming clean and rejected rows to disk.
 - [1kpapers](https://www.1kpapers.com/) - 1,018 papers classified by topic and published as a browsable site.
 - [jev.nvim](https://github.com/valentynkit/jev.nvim) - Neovim plugin that splits the current buffer into functions with Treesitter, asks Jev a plain-language question against each one, and lists the answers in the quickfix window ranked by probability.
+- [JevPDF](https://github.com/kylemclaren/jevpdf) - Ctrl+F by meaning for PDFs: pdf.js extracts each line in the browser, Jev answers a Noul per line ("does this line answer the query?") in batches of 16, and matching lines highlight page by page ranked by probability. Live demo: [jevpdf.fly.dev](https://jevpdf.fly.dev).
+- [jevsearch](https://github.com/kylemclaren/jevsearch) - Site search as a shadcn/ui registry block: keyword hits show on the first keystroke, then one request asks Jev a Noul per candidate page plus a Choice over all of them, re-orders the top 20, and keeps keyword order if the call fails; distinct from superagents-lab/jev-search.
+- [jevql](https://github.com/kylemclaren/jevql) - psql-style client for vanilla PostgreSQL: the plain SQL runs on the server, Jev answers the `jev()` / `jev_prob` / `jev_choice` / `jev_score` calls on the rows it returns, and the client applies the filter, sort, or group. Playground: [jevql.fly.dev/playground](https://jevql.fly.dev/playground).
+- [Milvus Model](https://github.com/milvus-io/milvus-model) - Python reranker adapter that sends candidate documents as Jev Noul questions in one request, then sorts the returned scores and preserves original document indices.
+- [Vector Graph RAG](https://github.com/zilliztech/vector-graph-rag) - Given a query and candidate graph relations, an optional Jev Noul reranker scores their relevance while application code filters and orders relations before retrieving supporting documents.
+- [Milvus Search with Jev](https://github.com/milvus-io/bootcamp/tree/master/bootcamp/RAG/search_with_jev) - Community cookbook with nine runnable Python notebooks combining Gemini embeddings, Milvus retrieval, and Jev decisions for reranking, filtering, search stopping, routing, cache reuse, curation, guardrails, and evaluation.
 
 → [More search and reranking builds on madewithjev.com](https://madewithjev.com/categories/search)
 
@@ -355,6 +362,7 @@ Open-source projects that put Jev in a real loop. Grouped by what Jev decides.
 - [jev-eval-agent](https://github.com/vinilana/jev-eval-agent) - Public eval harness for early Jev tests.
 - [Supercov](https://github.com/supercorp-ai/supercov) - Code quality and test coverage for coding agents: Jev scores each source file so the agent knows what to fix first.
 - [jev-commit](https://github.com/valentynkit/jev-commit) - Pre-commit hook where one Jev call judges whether the commit message matches the staged diff, checks for debug leftovers and unmentioned work, and blocks the commit only when it detects a credential.
+- [jgrep](https://github.com/kyu1204/jgrep) - Evaluates code chunks, git diff hunks, or CSV rows against a description with one Noul each, 16 per request; `--diff` turns the answer into grep exit codes for a CI gate and `--tests` returns the test files a diff plausibly affects.
 
 ### Model routing
 
@@ -366,6 +374,7 @@ Open-source projects that put Jev in a real loop. Grouped by what Jev decides.
 - [jcm-router](https://github.com/adarshmishra07/jcm-router) - Local proxy that picks the Claude model and reasoning effort per message while leaving the cached main chat untouched.
 - [jev-agent-skill-router](https://github.com/GodsBoy/jev-agent-skill-router) - Routes agent skill selection through typed, confidence-aware decisions so weak matches are declined instead of guessed.
 - [langchain-skill-router](https://github.com/deyna256/langchain-skill-router) - Reads the user's request plus the recent conversation, asks Jev one Choice over the SKILL.md catalog together with a "does this need a skill at all" gate and a per-candidate fit question, and the middleware loads one skill's instructions, offers up to three candidates, or nothing.
+- [Jevonian](https://github.com/xinyao27/jevonian) - Local OpenAI, Anthropic, and Responses-compatible proxy where one Jev call answers both the model route and the thinking level for the virtual model jevonian/auto, from session state, quota health, candidate capabilities, and cache-switch penalties; code filters candidates by wire protocol, context window, effort floor, and spent quota windows before Jev is asked, and a pinned model ID or explicit jevonian route skips Jev entirely.
 
 ### Business and vertical apps
 
@@ -382,6 +391,7 @@ Open-source projects that put Jev in a real loop. Grouped by what Jev decides.
 - [Smart home assistant demo](https://docs.typesafe.ai/demos/smart-home) - Official interactive demo of speculative fan-out: many questions in one call, code keeps the relevant answers, LLM only for splits and chit-chat.
 - [SmartMoney-Cub](https://github.com/myc0576/Smartmoney-Cub) - Experimental, read-only trading journal that passes filings, event wires and central-bank statements to Jev for typed Choice, Noul and Score answers on evidence and policy stance, keeping a human in the promote/reject loop and never placing an order.
 - [Jev Web Analyzer](https://github.com/replynodes/jev-web-analyzer) - Product evaluation: evaluates a public SaaS landing page as clean Markdown with ten bounded Jev `Choice` questions about first-visit understanding, leaving validation, policy, and presentation in application code.
+- [profanity-checker](https://github.com/4rays/profanity-checker) - Cloudflare Workers profanity filter: state is the text or username, Jev answers a `Noul` for literal profanity and a `Noul` for phonetic/look-alike disguise (one parallel inference call), and the Worker applies a 0.5 threshold and returns a typed `is_profane` verdict.
 
 ### Robotics and hardware
 
@@ -413,6 +423,7 @@ Toys, live sites, and realtime agents. Most shipped in the first days after laun
 - [got-jev](https://github.com/phureewat29/got-jev) - Game of Thrones roleplay: a story model writes the scene; Jev answers where Jon Snow is, how much danger, and what should play under it.
 - [Little Airways](https://github.com/lbotinelly/jev-little-airways) - Toy archipelago air-traffic control: divert / emergency / who lands first, ~150 ms.
 - [jev-plays-pokemon-red](https://github.com/valentynkit/jev-plays-pokemon-red) - Pokemon Red on PyBoy where code owns the route and the arithmetic, Jev picks only at branches, and every battle turn logs a faint prediction scored by Brier against what the RAM says.
+- [HR tool pile](https://dormytech.com/jev) - Describe an HR problem in plain words; one Noul per tool asks whether it is one of the best answers, a separate Choice reads company size, and code applies both before lifting the matching tools out of a pile of 50 HR logos.
 
 → [More games and real-time builds on madewithjev.com](https://madewithjev.com/categories/games-and-real-time)
 
@@ -444,6 +455,8 @@ Tools that expose Jev to coding agents and MCP clients.
 - [jev-guard](https://github.com/leepokai/jev-guard) - Prompt-injection and dangerous-action guard for Claude Code, Codex, Pi, and ACP agents.
 - [dsh-auto-mode](https://git.allen-software.com/allenh1/dsh-auto-mode) - DeepSeek Harness permission preset whose end-prompt step has Jev answer the open questions an agent leaves in its final message.
 - [jev-belay](https://github.com/valentynkit/jev-belay) - Claude Code Stop hook that reads the transcript for evidence of a completed task and, only when files changed with no passing check since, spends one four-question Jev call before allowing the agent to stop, failing open on every error path.
+- [TruthGate](https://github.com/satangel2222/truthgate) - Stop hook and deterministic gatekeeper for Claude Code, Cursor, and Antigravity: uses parallel Jev Nouls to block fake completions and passive nagging before physical exit code and screenshot verification.
+- [DGP (Decision Graph Protocol)](https://github.com/numerous-com/dgp) - Experimental protocol for agents that decide before they act: Jev assesses framed evidence with typed choices (proceed, escalate, abstain); deterministic code checks permissions, freshness and commit guards before any action. Python/SQLite demo with a Jev resolver; actions simulated.
 
 ## Use cases by industry
 
@@ -546,7 +559,9 @@ Independent work inspired by Jev's interface. These are not TypeSafe models.
 - [PlayJev](https://github.com/OmniJev/PlayJev) - Plays ten browser games from the frame alone: a fine-tuned Qwen3.5-0.8B reads the option letters and returns one move per forward pass, with open weights and a browser demo.
 - [Parallel Constrained Decoding (Qwen2.5-1B-RLCD)](https://huggingface.co/spaces/drinkmoonshine/parallel-constrained-decoding) - Hugging Face space exploring open-source RLCD-style parallel constrained decoding.
 - [eve-rlcd](https://github.com/anthony-maio/eve-rlcd) - Jev-inspired 0.6B decision model trained with reinforcement learning from right/wrong feedback only (reward: outcome minus stated probability); answers parallel Choice, Score and Noul questions over one state without generating text, with an RLVR ablation and [open weights](https://huggingface.co/anthonym21/qwen3-0.6b-rlcd-decision). Explicitly not a reproduction of TypeSafe's method.
-- [RSI-Jev](https://github.com/Shanghua-Gao/RSI-Jev) - Jev-inspired open 0.8B and 2B models that read a document, answer `Choice`, `Score` and `Noul` questions in one forward pass over the same `POST /v1/systemone` schema, and hand back a probability per option that the caller thresholds — measured so that no confidence bin falls below its stated probability and acting on the top 40% by confidence is 80% correct.
+- [RSI-Jev](https://github.com/Shanghua-Gao/RSI-Jev) - Jev-inspired open 0.8B and 2B models that read a document, answer `Choice`, `Score` and `Noul` questions in one forward pass over the same `POST /v1/systemone` schema, and hand back a probability per option that the caller thresholds to a result the repository measures against its own confidence bins.
+- [Verdict](https://github.com/Manavarya09/verdict) - Jev-inspired open (Apache-2.0) decision model: 118M multilingual bi-encoder answering Choice / Score / Noul on the same `POST /v1/systemone` wire format, with temperature scaling plus a conformal abstain set, runs on CPU or in the browser via ONNX, fits on your own labels in seconds; the README says it loses to Laya on typed decisions.
+- [jevos](https://github.com/feder-cr/jev) - A 1B model (MiniCPM) cut to 17 layers with a one-logit output head, serving Noul-only decisions from open GGUF weights (619 MB) over llama.cpp on CPU, no GPU. Explicitly not a reproduction of TypeSafe's architecture.
 
 ## Articles and coverage
 
@@ -572,6 +587,7 @@ Independent work inspired by Jev's interface. These are not TypeSafe models.
 - [A hype-free explanation of Jev](https://x.com/NathanFlurry/status/2100036101809619314) - Nathan Flurry: Jev does not replace GPT or Claude. It works like a very smart switch statement.
 - [Jev Explained for Normies](https://x.com/matthewcanham/status/2102077098756280413) - Matt Canham's X article, written for everyone who read the launch posts and still did not get it.
 - [Jev, explained like you're five](https://x.com/mvanhorn/status/2100761338918363550) - Matt Van Horn: think AI multiple choice, not AI essay writing. Keep the big model for the hard thinking.
+- [Jev in the Wild: A Data-Driven Analysis of the Jev Model's Functionality, Applications and Ecosystem](https://arxiv.org/abs/2609.30216) - The first data-driven survey of Jev's ecosystem: 2,170 public GitHub projects as of September 22, 2026, their early growth, the domains they cover, and how decision use splits across them.
 
 ## Discussions
 
